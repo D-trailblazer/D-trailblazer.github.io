@@ -1,0 +1,20 @@
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+.kranky-regular {
+   font-family: "Kranky", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+body {
+   font-family: kranky;
+}
+
+
+h1 {
+   font-size: 72px;
+}
