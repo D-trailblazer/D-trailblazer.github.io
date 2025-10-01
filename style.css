@@ -4,6 +4,12 @@
    margin: 0;
 }
 
+@font-face {
+   font-family: 'kranky';
+   src: url(./resources/Kranky/Kranky-Regular.ttf);
+   font-weight: normal;
+   font-style: normal;
+}
 .kranky-regular {
    font-family: "Kranky", serif;
    font-weight: 400;
@@ -11,7 +17,7 @@
 }
 
 body {
-   font-family: kranky;
+   font-family: 'kranky', sans-serif;
 }
 
 
