@@ -10,7 +10,8 @@
    font-weight: normal;
    font-style: normal;
 }
-@font-face{
+
+@font-face {
    font-family: 'playfair';
    src: url(./resources/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
    font-style: normal;
@@ -19,12 +20,62 @@
 
 body {
    font-family: 'rubik', sans-serif;
+   padding: 0 200px;
 }
 
+header {
+   margin: 100px 0 100px;
+   border: 1px solid;
 
-h1,h2,h3,h4,h5,h6 {
-   font-size: 72px;
+   h1 {
+      font-size: 72px;
+      text-align: left;
+
+   }
+}
+
+h2,h3,h4,h5,h6 {
    font-family: 'playfair', serif;
    /* font-family: 'rubik', sans-serif; */
+}
 
+h2 {
+   font-size: 48px;
+}
+p{
+   font-size: 18px;
+}
+
+/* div styling */
+.row {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   border: 3px solid black;
+
+   .column {
+      width: 50%;
+      border: 1px solid red;
+   }
+}
+
+.row .column:nth-child(2) {
+   background-color: azure;
+}
+
+.view-more {
+   line-height: 1.5em;
+   padding: 6px 28px 8px 28px;
+   border-radius: 30px;
+   margin-top: 24px;
+   background-color: #000;
+   color: #fff;
+   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+   font-size: 18px;
+   border: none;
+
+   &:hover {
+      background-color: navajowhite;
+      color: black;
+   }
 }
