@@ -5,22 +5,26 @@
 }
 
 @font-face {
-   font-family: 'kranky';
-   src: url(./resources/Kranky/Kranky-Regular.ttf);
+   font-family: 'rubik';
+   src: url(./resources/Rubik/Rubik-VariableFont_wght.ttf);
    font-weight: normal;
    font-style: normal;
 }
-.kranky-regular {
-   font-family: "Kranky", serif;
-   font-weight: 400;
+@font-face{
+   font-family: 'playfair';
+   src: url(./resources/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
    font-style: normal;
+
 }
 
 body {
-   font-family: 'kranky', sans-serif;
+   font-family: 'rubik', sans-serif;
 }
 
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
    font-size: 72px;
+   font-family: 'playfair', serif;
+   /* font-family: 'rubik', sans-serif; */
+
 }
