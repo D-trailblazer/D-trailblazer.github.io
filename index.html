@@ -2,93 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chidubem Eneh</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./resources/fontawesome-free-6.6.0-web/css/all.css">
-    <link rel="stylesheet" href="./resources/fontawesome-free-6.6.0-web/css/brands.css">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Chidubem Eneh</title>
+   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="./resources/fontawesome-free-6.6.0-web/css/all.css" />
+   <link rel="stylesheet" href="./resources/fontawesome-free-6.6.0-web/css/brands.css" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#"><b>Chidubem Eneh</b></a></li>
-                <li id="contact-link">
-                    <b>Contact</b>
-                    <div class="contact">
-                        <b>Reach out</b>
-                        <a href="">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
+   <div class="container">
+      <nav>
+         <header>
+            <span><img src="./resources/Images/IMG_20240712_171256_609~2.jpg" alt=""></span>
+            <span id="name">Chidubem Eneh</span>
+         </header>
+         <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </nav>
 
-    <!-- Main content -->
-    <main>
-        <h1>Chidubem Eneh is a talented entry <br> level UX designer</h1>
-        <section class="work">
+      <main>
+         <section class="work" id="work">
+            <h1>Chidubem Eneh is a talented entry <br> level UX designer</h1>
             <div class="project" id="restaurant">
-                <div class="column image">
-                    <img src="./resources/Images/hamburger.jpg" alt="">
-                </div>
-                <div class="column description">
-                    <h2>Rencia Foods - Restaurant & Catering services</h2>
-                    <p>
-                        Rencia Foods is a food catering venture comprising of different consumer food services
-                    </p>
-                    <a href="page2.html" class="view-more">View more</a>
-                </div>
-
+               <div class="column image">
+                  <img src="./resources/Images/hamburger.jpg" alt="">
+               </div>
+               <div class="column description">
+                  <h2>Rencia Foods - Restaurant & Catering services</h2>
+                  <p>
+                     Rencia Foods is a food services provider offering catering services
+                  </p>
+                  <a href="page2.html" class="view-more-btn">View more</a>
+               </div>
             </div>
-            <hr>
+
             <div class="project" id="plasma">
-                <div class="column description">
-                    <h3 class="header">KDE Plasma Desktop - side quest</h3>
-                    <p>Redesign of the Plasma desktop environment offering different spins for individual tastes</p>
-                    <a href="page3.html" class="view-more">View more</a>
-                </div>
-                <div class="column image">
-                    <img src="./resources/Images/kde/Desktop/Professional1.png" alt="">
-                </div>
+               <div class="column description">
+                  <h2 class="header">KDE Plasma Desktop (personal)</h2>
+                  <p>My take on the Plasma desktop environment offering different spins for individual tastes</p>
+                  <a href="page3.html" class="view-more-btn">View more</a>
+               </div>
+               <div class="column image">
+                  <img src="./resources/Images/kde/Desktop/Professional1.png" alt="">
+               </div>
             </div>
-            </div>
-        </section>
+         </section>
 
-        <!-- Pictures Gallery carousel -->
-        <!-- <section class="gallery">
-            <h2 class="headers">
-                Photo Gallery
-            </h2>
-            <div class="carousel">
-                <div class="gellery-item">
-                    <img src="" alt="">
-                </div>
-                <div class="gellery-item">
-                    <img src="" alt="">
-                </div>
-                <div class="gellery-item">
-                </div>
-            </div>
-        </section> -->
-    </main>
+         <section class="about" id="about">
+            <h4>About Me</h4>
+            <div class="bio">
+               <div class="colum">
+                  <img src="./resources/Images/IMG_20240712_171256_609~2.jpg" alt="">
+               </div>
+               <div class="column">
+                  <p><b>Hey, I'm Chidubem</b></p>
+                  <p>
+                     I’m a UX newbie and a multi-faceted innovator.
+                     My journey into UX began with critiquing the usability of everyday products and services. I
+                     realized
+                     that
+                     the solution lies not just in functionality but in thoughtful, human-centered design.
+                     Being an open-minded problem solver, I ventured into the world of UX design. With a background in
+                     software development and science, I’m driven to uncover edge cases that stand in the way of
+                     users satisfaction.
+                     Have a challenge for me? Don’t hesitate to reach out — I’d love to collaborate.
+                  </p>
 
-    <footer>
-        <div>
-            <p>&copy; Chidubem Eneh</p>
+                  <div class="socials">
+                     <a href=""><i class="fab fa-linkedin fa-xl"></i></a>
+                     <a href=""><i class="fab fa-whatsapp fa-xl"></i></a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="contact" id="contact">
+            <div class="contact">
+               <h2>Have a challenge, let's solve it!!</h2>
+               <form action="post">
+                  <input type="text" placeholder="Your Name">
+                  <input type="email" placeholder="Your email">
+                  <textarea>What's your message</textarea>
+               </form>
+            </div>
+         </section>
+      </main>
+
+      <footer>
+         <div>
+            <p>Built by Me &copy;</p>
             <a href="enehchidubem61@gmail.com">enehchidubem61@gmail.com</a>
-        </div>
-    </footer>
+         </div>
+      </footer>
+   </div>
+   <script src="script.js"></script>
 </body>
 
 </html>
