@@ -115,7 +115,7 @@ main {
 
    .work,
    .about {
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
    }
 }
 
@@ -124,7 +124,7 @@ main {
 section.work {
    display: flex;
    flex-direction: column;
-   gap: 3rem;
+   gap: 4rem;
 
    h1 {
       font-size: clamp(2rem, 3vw, 2.8rem);
@@ -323,7 +323,6 @@ footer {
    text-align: center;
    padding: 1rem;
    font-size: 0.9rem;
-   /* display: flex; */
    justify-content: space-between;
    margin-left: 265.2px;
 
