@@ -265,7 +265,6 @@ section.about {
       img {
          flex: 1 1 400px;
          max-width: 450px;
-         /* width: 100%; */
          border-radius: var(--radius);
          margin: 1.2rem 0;
          border: 3px solid var(--color-light);

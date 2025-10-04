@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Chidubem Eneh - Rencia foods</title>
+   <title>Rencia Foods - cased study </title>
+   <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
-   
+   <header>
+      <h1>🍽️ Rencia Foods Restaurant App</h1>
+      <p>A concept UX Case Study focused on enhancing restaurant efficiency and customer satisfaction</p>
+   </header>
+
+   <main>
+      <section id="problem">
+         <p class="overview">
+            Rencia Foods is my family newly opened restaurant that experiences crowding and delays during
+            peak hours. This concept app aims to help the business manage seating
+            capacity efficiently while ensuring customers are served promptly with
+            their preferred dishes available.
+         </p>
+
+         <h2>🧭 1. Problem Definition</h2>
+         <h3>Business goal:</h3>
+         <ul>
+            <li>Manage seating capacity and reduce customer disappointment.</li>
+         </ul>
+         <h3>Customer goals:</h3>
+         <ul>
+            <li>Be served quickly after entry.</li>
+            <li>Always find their preferred dish available.</li>
+         </ul>
+         <h3>Pain points:</h3>
+         <ul>
+            <li>Customers arrive to find no free tables.</li>
+            <li>Favorite dishes often sold out.</li>
+            <li>Wait time for meals too long due to poor coordination.</li>
+         </ul>
+      </section>
+
+      <section class="research">
+         <h2>Research</h2>
+         <p>
+            Initial user insights apart from were drawn from observations, casual conversations with diners
+            and restaurant staff. Common issues included long wait times,
+            unavailable dishes, and uncertainty about seating. These insights guided
+            the app’s design priorities.
+         </p>
+
+         <h3>Key Insights</h3>
+         <ul>
+            <li>Users want real-time table availability before arrival.</li>
+            <li>Updated menu availability builds customer trust.</li>
+            <li>Simple reservation flows reduce frustration.</li>
+         </ul>
+      </section>
+
+      <section id="solution">
+         <h2>💡 2. Proposed Concept</h2>
+         <p>
+            A mobile application that provides real-time table tracking, allows
+            quick reservations, and displays live menu availability. The solution
+            ensures that both staff and customers experience smoother, faster
+            interactions within the restaurant environment.
+         </p>
+         </p>
+      </section>
+
+      <section id="flow">
+         <h2>🧩 5. User Flow (Simplified)</h2>
+         <ol>
+            <li>Launch App → Home Screen (Reserve Table / Order Food).</li>
+            <li>Reserve Table: Select time, party size, table type → confirm.</li>
+            <li>View Menu: Choose dish → see availability → pre-order if desired.</li>
+            <li>Payment: In-app or at restaurant.</li>
+            <li>On Arrival: Receives table number automatically.</li>
+            <li>Meal Tracking: Real-time updates until food is served.</li>
+         </ol>
+      </section>
+
+      <section id="features">
+         <h2>📱 3. Key Features (MVP Scope)</h2>
+         <h3>For Customers:</h3>
+         <ul>
+            <li>Table Reservation: Check available tables and reserve before arrival.</li>
+            <li>Menu Browsing: View dishes with live availability status.</li>
+            <li>Pre-order Option: Order before arriving so the kitchen starts early.</li>
+            <li>Estimated Wait Time: See how long it’ll take for dishes to be served.</li>
+            <li>Order Tracking: View progress (Cooking → Ready → Served).</li>
+            <li>Favorite Dishes: Save preferences for quick reordering.</li>
+         </ul>
+
+         <h3>For Restaurant Staff/Admin:</h3>
+         <ul>
+            <li>Dashboard: Manage reservations and orders in real-time.</li>
+            <li>Inventory Alerts: Auto-mark dishes unavailable when low on ingredients.</li>
+            <li>Table Layout Visualization for efficient seating.</li>
+            <li>Analytics: Track peak hours, customer trends, and delays.</li>
+         </ul>
+      </section>
+
+      <section id="value">
+         <h2>🎯 4. Expected Outcomes</h2>
+         <ul>
+            <li><strong>For Business:</strong> Optimized space management, reduced stress on waiters, better forecasting
+               of demand.</li>
+            <li><strong>For Customers:</strong> No more long waits, disappointment, or missing out on favorite meals.
+            </li>
+         </ul>
+      </section>
+
+      <section class="role">
+         <h2>My role</h2>
+         <p>Concept design, Ux planning and documentation</p>
+      </section>
+
+      <div class="coming-soon fade-up delay10">
+         ✨ Visual mockups and interactive prototype coming soon.
+      </div>
+   </main>
+
+   <footer>
+      <p>© 2025 Case Study – Designed by You</p>
+   </footer>
+
+   <script>
+      // Reveal on scroll
+      const reveals = document.querySelectorAll("section");
+      window.addEventListener("scroll", () => {
+         reveals.forEach(sec => {
+            const top = sec.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+               sec.classList.add("reveal");
+            }
+         });
+      });
+   </script>
 </body>
+
 </html>
