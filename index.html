@@ -23,8 +23,9 @@
             <li><a href="#contact">Contact</a></li>
          </ul>
       </nav>
-
+      
       <main>
+         
          <section class="work" id="work">
             <h1>Chidubem Eneh is a talented entry <br> level UX designer</h1>
             <div class="project" id="restaurant">
@@ -72,7 +73,7 @@
                      Have a challenge for me? Don’t hesitate to reach out — I’d love to collaborate.
                   </p>
 
-                  <div class="socials">
+                  <div class="socials" id="socials">
                      <a href=""><i class="fa fa-envelope fa-xl"></i></a>
                      <a href=""><i class="fab fa-linkedin fa-xl"></i></a>
                      <a href=""><i class="fab fa-whatsapp fa-xl"></i></a>
@@ -81,16 +82,31 @@
             </div>
          </section>
 
-         <section class="contact" id="contact">
-            <div class="contact">
-               <h2>Have a challenge, let's solve it!!</h2>
-               <form action="post">
-                  <input type="text" placeholder="Your Name">
-                  <input type="email" placeholder="Your email">
-                  <textarea>What's your message</textarea>
-               </form>
+      <section class="contact" id="contact">
+         <h2>Having a challenge?</h2>
+         <p> Let's tackle it. Send a <a href="#socials">DM</a> or drop a message below</p>
+
+         <form method="post">
+            <div class="form-row">
+               <div class="form-col">
+                  <label for="name">Name</label>
+                  <input type="name" id="text" placeholder="Your Name">
+               </div>
+
+               <div class="form-col">
+                  <label for="email">Email</label>
+                  <input type="text" id="email" placeholder="youremail@gmail.com">
+               </div>
             </div>
-         </section>
+
+            <label for="text">Message</label>
+            <textarea name="" id="text" placeholder="Drop a message"></textarea>
+
+            <button type="submit" id="submit">
+               Send message <i class="fab fa-telegram"></i>
+            </button>
+         </form>
+      </section>
       </main>
 
       <footer>
@@ -102,5 +118,4 @@
    </div>
    <script src="script.js"></script>
 </body>
-
 </html>
