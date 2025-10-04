@@ -17,15 +17,22 @@
             <span><img src="./resources/Images/IMG_20240712_171256_609~2.jpg" alt=""></span>
             <span id="name">Chidubem Eneh</span>
          </header>
-         <ul>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+         <!-- Toggle button for mobile -->
+         <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+
+         <ul id="nav-links">
+            <li><a href="#work" title="See my UX projects">UX Designer</a></li>
+            <li><a href="#about" title="Learn about my approach">Innovator</a></li>
+            <li><a href="#contact" title="Get in touch">Problem Solver</a></li>
          </ul>
       </nav>
-      
+
       <main>
-         
          <section class="work" id="work">
             <h1>Chidubem Eneh is a talented entry <br> level UX designer</h1>
             <div class="project" id="restaurant">
@@ -56,11 +63,11 @@
          <section class="about" id="about">
             <h4>About Me</h4>
             <div class="bio">
-               <div class="colum">
+               <div class="column">
                   <img src="./resources/Images/IMG_20240712_171256_609~2.jpg" alt="">
                </div>
                <div class="column">
-                  <p><b>Hey, I'm Chidubem</b></p>
+                  <p><b>Hey, I'm Chidubem 👋🏻</b></p>
                   <p>
                      I’m a UX newbie and a multi-faceted innovator.
                      My journey into UX began with critiquing the usability of everyday products and services. I
@@ -74,48 +81,53 @@
                   </p>
 
                   <div class="socials" id="socials">
-                     <a href=""><i class="fa fa-envelope fa-xl"></i></a>
+                     <a href="mailto:enehchidubem61@gmail.com" title="send an email"><i
+                           class="fa fa-envelope fa-xl"></i></a>
                      <a href=""><i class="fab fa-linkedin fa-xl"></i></a>
-                     <a href=""><i class="fab fa-whatsapp fa-xl"></i></a>
+                     <a href="https://wa.me/2349059157069" title="hit me on whatsapp"><i
+                           class="fab fa-whatsapp fa-xl"></i></a>
                   </div>
                </div>
             </div>
          </section>
 
-      <section class="contact" id="contact">
-         <h2>Having a challenge?</h2>
-         <p> Let's tackle it. Send a <a href="#socials">DM</a> or drop a message below</p>
+         <section class="contact" id="contact">
+            <h2>Having a challenge?</h2>
+            <p> Let's tackle it. Send a <a href="https://wa.me/2349059157069">DM</a> or drop a message below</p>
 
-         <form method="post">
-            <div class="form-row">
-               <div class="form-col">
-                  <label for="name">Name</label>
-                  <input type="name" id="text" placeholder="Your Name">
+            <form>
+               <div class="form-row">
+                  <div class="form-col">
+                     <label for="name">Name</label>
+                     <input type="text" name="name" id="name" placeholder="Your Name">
+                  </div>
+
+                  <div class="form-col">
+                     <label for="email">Email</label>
+                     <input name="Email" type="text" id="email" placeholder="youremail@gmail.com">
+                  </div>
                </div>
 
-               <div class="form-col">
-                  <label for="email">Email</label>
-                  <input type="text" id="email" placeholder="youremail@gmail.com">
-               </div>
-            </div>
+               <label for="text">Message</label>
+               <textarea name="message" id="text" placeholder="Drop a message"></textarea>
 
-            <label for="text">Message</label>
-            <textarea name="" id="text" placeholder="Drop a message"></textarea>
+               <button type="submit" id="submit">
+                  Send message <i class="fab fa-telegram"></i>
 
-            <button type="submit" id="submit">
-               Send message <i class="fab fa-telegram"></i>
-            </button>
-         </form>
-      </section>
+               </button>
+               <p id="status"></p>
+            </form>
+         </section>
       </main>
 
       <footer>
          <div>
-            <p>Built by Me &copy;</p>
+            <p>© 2025 Chidubem Eneh — All Rights Reserved</p>
             <a href="enehchidubem61@gmail.com">enehchidubem61@gmail.com</a>
          </div>
       </footer>
    </div>
    <script src="script.js"></script>
 </body>
+
 </html>

@@ -6,144 +6,100 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <style>
-      :root {
-         --bg: #111;
-         --text: #ccc;
-         --heading: #eee;
-         --accent: #777;
-         --divider: linear-gradient(to right, #444, #666, #444);
+      :section.about {
+   background: linear-gradient(135deg, var(--color-dark), var(--color-gray));
+   padding: 3.5rem 2rem;
+   border-radius: var(--radius);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   opacity: 0;
+   transform: translateY(40px);
+   transition: opacity 0.8s ease, transform 0.8s ease;
+
+   h4 {
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      text-align: center;
+      color: var(--color-light);
+   }
+
+   .bio {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .colum, .column {
+         flex: 1 1 45%;
+         max-width: 45%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
       }
 
-      .case-study {
-         background: var(--bg);
-         color: var(--text);
-         padding: 5rem 2rem;
-         position: relative;
-         overflow: hidden;
-      }
-
-      .case-study .content {
-         max-width: 800px;
-         margin: 0 auto;
-      }
-
-      .case-study h2 {
-         font-family: "Playfair Display", serif;
-         font-size: 2.5rem;
-         color: var(--heading);
-         text-align: center;
-         margin-bottom: 0.5rem;
-      }
-
-      .case-study .subtitle {
-         text-align: center;
-         font-style: italic;
-         color: var(--accent);
-         margin-bottom: 3rem;
-      }
-
-      .case-study h3 {
-         font-family: "Rubik", sans-serif;
-         font-size: 1.25rem;
-         color: var(--heading);
-         margin-bottom: 0.5rem;
-      }
-
-      .case-study p,
-      .case-study li {
-         line-height: 1.7;
-         margin-bottom: 1rem;
-      }
-
-      .case-study ul {
-         list-style: disc;
-         padding-left: 1.5rem;
-      }
-
-      .divider {
-         position: absolute;
-         left: 0;
-         width: 100%;
-         height: 2px;
-         background: var(--divider);
-      }
-
-      .divider.top {
-         top: 0;
-      }
-
-      .divider.bottom {
-         bottom: 0;
-      }
-
-      .coming-soon {
-         border: 1px solid #333;
-         background: #1a1a1a;
-         border-radius: 16px;
-         padding: 1.5rem;
-         text-align: center;
-         font-style: italic;
-         color: var(--accent);
-         margin-top: 3rem;
-      }
-
-      /* --- Animations --- */
-      @keyframes fadeUp {
-         from {
-            opacity: 0;
-            transform: translateY(30px);
-         }
-
-         to {
-            opacity: 1;
-            transform: translateY(0);
+      .colum {
+         img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: var(--radius);
+            border: 3px solid var(--color-light);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+            object-fit: cover;
          }
       }
 
-      .fade-up {
-         opacity: 0;
-         animation: fadeUp 0.8s ease forwards;
+      .column {
+         p {
+            font-size: clamp(1rem, 1.2vw, 1.15rem);
+            line-height: 1.7;
+            text-align: left;
+            color: var(--color-light);
+            margin-bottom: 1rem;
+
+            &:first-of-type {
+               font-weight: 600;
+               margin-bottom: 1.2rem;
+            }
+         }
+
+         .socials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+
+            a {
+               color: var(--color-light);
+               transition: transform 0.3s ease, color 0.3s ease;
+
+               &:hover {
+                  color: var(--color-accent);
+                  transform: translateY(-3px);
+               }
+            }
+         }
       }
 
-      .delay1 {
-         animation-delay: 0.1s;
-      }
+      /* 📱 Responsive layout */
+      @media (max-width: 768px) {
+         flex-direction: column;
 
-      .delay2 {
-         animation-delay: 0.2s;
-      }
+         .colum, .column {
+            max-width: 100%;
+            text-align: center;
+         }
 
-      .delay3 {
-         animation-delay: 0.3s;
+         .column p {
+            text-align: center;
+         }
       }
+   }
+}
 
-      .delay4 {
-         animation-delay: 0.4s;
-      }
-
-      .delay5 {
-         animation-delay: 0.5s;
-      }
-
-      .delay6 {
-         animation-delay: 0.6s;
-      }
-
-      .delay7 {
-         animation-delay: 0.7s;
-      }
-
-      .delay8 {
-         animation-delay: 0.8s;
-      }
-
-      .delay9 {
-         animation-delay: 0.9s;
-      }
-
-      .delay10 {
-         animation-delay: 1s;
-      }
    </style>
 </head>
 

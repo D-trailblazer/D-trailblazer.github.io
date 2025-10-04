@@ -15,6 +15,16 @@ function revealOnScroll() {
 window.addEventListener("load", revealOnScroll);
 window.addEventListener("scroll", revealOnScroll);
 
+
+// const navToggle = document.getElementById("nav-toggle");
+// const navLinks = document.getElementById("nav-links");
+
+// navToggle.addEventListener("click", () => {
+// 	navToggle.classList.toggle("active");
+// 	navLinks.classList.toggle("open");
+// });
+
+
 // Scroll spy effect
 document.addEventListener("DOMContentLoaded", () => {
 	const sections = document.querySelectorAll("main section");
@@ -43,29 +53,30 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//    const sections = document.querySelectorAll("main section");
-//    const navLinks = document.querySelectorAll("nav ul li a");
+// form submission logic
+const form = document.querySelector("form");
 
-//    window.addEventListener("scroll", () => {
-//       let current = "";
+form.addEventListener("submit", async (e) => {
+	e.preventDefault();
+	const status = document.getElementById("status");
 
-//       sections.forEach((section) => {
-//          const sectionTop = section.offsetTop - 100; // offset for header height
-//          const sectionHeight = section.clientHeight;
-//          if (
-//             pageYOffset >= sectionTop &&
-//             pageYOffset < sectionTop + sectionHeight
-//          ) {
-//             current = section.getAttribute("id");
-//          }
-//       });
+	const data = Object.fromEntries(new FormData(form));
 
-//       navLinks.forEach((link) => {
-//          link.classList.remove("active");
-//          if (link.getAttribute("href").includes(current)) {
-//             link.classList.add("active");
-//          }
-//       });
-//    });
-// });
+	try {
+		const response = await fetch("https://formspree.io/f/xblzkdga", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(data)
+		});
+
+		if (response.ok) {
+			status.textContent = "✅ Message sent successfully!";
+			form.reset();
+		} else {
+			status.textContent = "❌ Failed to send message.";
+		}
+	} catch (error) {
+		status.textContent = "⚠️ Network error. Try again later.";
+	}
+});
+

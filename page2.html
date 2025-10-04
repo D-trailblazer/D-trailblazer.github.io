@@ -1,192 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1" />
    <title>Rencia Foods Case Study | Chidubem Eneh</title>
-   <link rel="stylesheet" href="./resources/fontawesome-free-6.6.0-web/css/all.css" />
-   <link rel="stylesheet" href="style2.css" />
-
-   <style>
-      /* === Scroll Progress Bar === */
-      #progress-bar {
-         position: fixed;
-         top: 0;
-         left: 0;
-         height: 3px;
-         background: var(--accent);
-         width: 0%;
-         z-index: 1000;
-         transition: width 0.25s ease-out;
-      }
-
-      /* === Guided Scroll Bullets === */
-      #scroll-guide {
-         position: fixed;
-         right: 30px;
-         top: 50%;
-         transform: translateY(-50%);
-         display: flex;
-         flex-direction: column;
-         gap: 1.1rem;
-         z-index: 999;
-      }
-
-      .bullet {
-         width: 10px;
-         height: 10px;
-         background: #333;
-         border-radius: 50%;
-         position: relative;
-         cursor: pointer;
-         transition: background 0.3s ease, transform 0.3s ease;
-      }
-
-      .bullet.active {
-         background: var(--accent);
-         transform: scale(1.3);
-      }
-
-      .bullet:hover {
-         background: var(--light);
-      }
-
-      /* Tooltip for bullets */
-      .bullet::after {
-         content: attr(data-label);
-         position: absolute;
-         right: 140%;
-         top: 50%;
-         transform: translateY(-50%);
-         background: var(--dark);
-         color: var(--light);
-         padding: 4px 8px;
-         font-size: 0.8rem;
-         border-radius: 6px;
-         white-space: nowrap;
-         opacity: 0;
-         pointer-events: none;
-         transition: opacity 0.3s ease;
-      }
-
-      .bullet:hover::after {
-         opacity: 1;
-      }
-
-      /* Header intro */
-      header {
-         animation: fadeInHeader 1.4s ease forwards;
-         opacity: 0;
-      }
-
-      @keyframes fadeInHeader {
-         0% {
-            opacity: 0;
-            transform: translateY(-30px);
-         }
-
-         100% {
-            opacity: 1;
-            transform: translateY(0);
-         }
-      }
-
-      section::after {
-         content: "";
-         display: block;
-         height: 1px;
-         width: 60%;
-         margin: 2rem auto 0;
-         background: linear-gradient(90deg,
-               transparent,
-               rgba(255, 255, 255, 0.1),
-               transparent);
-      }
-
-      section h2:hover {
-         color: var(--accent);
-         letter-spacing: 0.5px;
-         transition: var(--transition);
-      }
-
-      a {
-         color: var(--accent);
-         text-decoration: none;
-         position: relative;
-         transition: var(--transition);
-      }
-
-      a::after {
-         content: "";
-         position: absolute;
-         left: 0;
-         bottom: -2px;
-         width: 0;
-         height: 1px;
-         background: var(--accent);
-         transition: width 0.3s ease;
-      }
-
-      a:hover::after {
-         width: 100%;
-      }
-
-      @keyframes reveal {
-         from {
-            opacity: 0;
-            transform: translateY(40px);
-         }
-
-         to {
-            opacity: 1;
-            transform: translateY(0);
-         }
-      }
-
-      section.reveal {
-         animation: reveal 0.8s ease forwards;
-      }
-
-      .coming-soon {
-         animation: fadeIn 1.2s ease 0.4s forwards;
-         opacity: 0;
-      }
-
-      @keyframes fadeIn {
-         from {
-            opacity: 0;
-         }
-
-         to {
-            opacity: 1;
-         }
-      }
-
-      @media (max-width: 700px) {
-         #scroll-guide {
-            display: none;
-         }
-      }
-   </style>
+   <link rel="stylesheet" href="page2.css" />
 </head>
 
 <body>
+   <!-- top progress bar -->
    <div id="progress-bar"></div>
 
-   <!-- Scroll Guide -->
-   <div id="scroll-guide">
-      <div class="bullet" data-label="Overview"></div>
-      <div class="bullet" data-label="Problem"></div>
-      <div class="bullet" data-label="Goals"></div>
-      <div class="bullet" data-label="Research"></div>
-      <div class="bullet" data-label="Solution"></div>
-      <div class="bullet" data-label="Flow"></div>
-      <div class="bullet" data-label="Outcome"></div>
-      <div class="bullet" data-label="Role"></div>
+   <!-- right-side scroll bullets (outlined -> fill on active) -->
+   <div id="scroll-guide" aria-hidden="false">
+      <div class="bullet" data-target="#overview" data-label="Overview" tabindex="0"></div>
+      <div class="bullet" data-target="#problem" data-label="Problem" tabindex="0"></div>
+      <div class="bullet" data-target="#goals" data-label="Goals" tabindex="0"></div>
+      <div class="bullet" data-target="#research" data-label="Research" tabindex="0"></div>
+      <div class="bullet" data-target="#solution" data-label="Solution" tabindex="0"></div>
+      <div class="bullet" data-target="#flow" data-label="User Flow" tabindex="0"></div>
+      <div class="bullet" data-target="#outcome" data-label="Outcome" tabindex="0"></div>
+      <div class="bullet" data-target="#role" data-label="Role & Tools" tabindex="0"></div>
    </div>
 
-   <header>
+   <header id="top-header">
       <h1>🍽️ Rencia Foods Restaurant App</h1>
       <p>Concept UX Case Study by <strong>Chidubem Eneh</strong></p>
    </header>
@@ -195,7 +32,7 @@
       <section id="overview">
          <h2>Overview</h2>
          <p>
-            Rencia Foods is a restaurant concept designed to manage space efficiently and minimize customer waiting
+            Rencia Foods app is a restaurant concept designed for my newly opened restaurant  to manage space efficiently and minimize customer waiting
             times.
             This app ensures customers are served quickly and that their preferred dishes are always available.
          </p>
@@ -228,7 +65,7 @@
       <section id="research">
          <h2>Research Insights</h2>
          <p>
-            Feedback from diners and staff revealed pain points like unpredictable wait times and unavailable meals.
+            Feedback and Observation from diners and staff revealed pain points like unpredictable wait times and unavailable meals.
             This guided the design toward transparency and real-time communication.
          </p>
       </section>
@@ -237,7 +74,8 @@
          <h2>Proposed Solution</h2>
          <p>
             A mobile application that enables customers to check table availability, reserve seats, and see live menu
-            updates. Designed to streamline staff coordination and customer flow.
+            updates.
+            Designed to streamline staff coordination and customer flow.
          </p>
       </section>
 
@@ -271,39 +109,7 @@
       <p>© 2025 Chidubem Eneh — All Rights Reserved</p>
    </footer>
 
-   <script>
-      /* === Progress Bar === */
-      const progressBar = document.getElementById("progress-bar");
-      window.addEventListener("scroll", () => {
-         const scrollTop = window.scrollY;
-         const docHeight = document.body.scrollHeight - window.innerHeight;
-         const scrollPercent = (scrollTop / docHeight) * 100;
-         progressBar.style.width = scrollPercent + "%";
-      });
-
-      /* === Section Reveal === */
-      const sections = document.querySelectorAll("section");
-      const bullets = document.querySelectorAll(".bullet");
-
-      const revealOnScroll = new IntersectionObserver((entries) => {
-         entries.forEach((entry) => {
-            const index = Array.from(sections).indexOf(entry.target);
-            if (entry.isIntersecting) {
-               entry.target.classList.add("reveal");
-               bullets.forEach(b => b.classList.remove("active"));
-               if (bullets[index]) bullets[index].classList.add("active");
-            }
-         });
-      }, { threshold: 0.3 });
-
-      sections.forEach((section) => revealOnScroll.observe(section));
-
-      /* === Bullet Navigation === */
-      bullets.forEach((bullet, index) => {
-         bullet.addEventListener("click", () => {
-            sections[index].scrollIntoView({ behavior: "smooth" });
-         });
-      });
+   <script src="page2.js">
    </script>
 </body>
 
