@@ -241,12 +241,14 @@ section.work {
          text-decoration: none;
          transition: var(--transition);
          display: inline-block;
+         cursor: pointer;
 
          &hover:hover {
             background: var(--color-light);
             color: var(--color-dark);
          }
       }
+      
    }
 
    /* On page load */
