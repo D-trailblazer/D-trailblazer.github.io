@@ -1,0 +1,275 @@
+:root {
+   --bg: #121212;
+   --light: #f5f5f5;
+   --gray: #999;
+   --dark: #1e1e1e;
+   --accent: #e0e0e0;
+   --radius: 12px;
+   --transition: all 0.3s ease;
+}
+
+/* Base */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0
+}
+
+html,
+body {
+   height: 100%
+}
+
+body {
+   font-family: "Rubik", sans-serif;
+   background: var(--bg);
+   color: var(--light);
+   line-height: 1.6;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   scroll-behavior: smooth;
+}
+
+/* Progress bar (top) */
+#progress-bar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 3px;
+   background: var(--accent);
+   width: 0%;
+   z-index: 1200;
+   transition: width 0.22s ease-out;
+   box-shadow: 0 0 8px rgba(224, 224, 224, 0.08);
+}
+
+/* Layout */
+header {
+   text-align: center;
+   padding: 3rem 1.25rem;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+}
+
+header h1 {
+   font-size: clamp(1.8rem, 4vw, 2.6rem);
+   margin-bottom: .6rem
+}
+
+header p {
+   color: var(--gray);
+   font-size: 1.1rem;
+   
+}
+
+main {
+   max-width: 920px;
+   margin: 2rem auto 6rem;
+   padding: 0 1.25rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2.6rem;
+}
+
+section {
+   background: var(--dark);
+   border-radius: var(--radius);
+   padding: 1.8rem 1.6rem;
+   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+   opacity: 0;
+   transform: translateY(36px);
+   transition: opacity 0.8s ease, transform 0.8s ease;
+   position: relative;
+}
+
+section.reveal {
+   opacity: 1;
+   transform: translateY(0)
+}
+
+section::after {
+   content: "";
+   display: block;
+   height: 1px;
+   width: 60%;
+   margin: 1.6rem auto 0;
+   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+}
+
+section h2 {
+   font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+   margin-bottom: 0.6rem;
+   color: var(--light);
+   transition: var(--transition);
+}
+
+section h2:hover {
+   color: var(--accent);
+   letter-spacing: 0.3px
+}
+
+h3 {
+   color: var(--accent);
+   margin-top: 1rem;
+   margin-bottom: .6rem
+}
+
+p,
+li {
+   color: var(--gray);
+   margin-bottom: .85rem;
+   line-height: 1.7
+}
+
+ul {
+   margin-left: 1.1rem;
+   list-style: disc
+}
+
+.coming-soon {
+   border: 1px solid rgba(255, 255, 255, 0.04);
+   background: #151515;
+   border-radius: 14px;
+   padding: 1.2rem;
+   text-align: center;
+   font-style: italic;
+   color: var(--accent);
+   margin-top: 1rem;
+   opacity: 0;
+   transform: translateY(8px);
+   animation: fadeIn 1s ease 0.6s forwards;
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(8px)
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0)
+   }
+}
+
+footer {
+   text-align: center;
+   padding: 2rem 1rem;
+   color: var(--gray);
+   border-top: 1px solid rgba(255, 255, 255, 0.04);
+   margin-top: 2rem;
+}
+
+/* === Right-side guided bullets (outlined -> fill with glow on active) === */
+#scroll-guide {
+   position: fixed;
+   right: 30px;
+   top: 50%;
+   transform: translateY(-50%);
+   display: flex;
+   flex-direction: column;
+   gap: 1.0rem;
+   z-index: 1100;
+   opacity: 0;
+   pointer-events: auto;
+   transition: opacity 0.45s ease;
+}
+
+#scroll-guide.visible {
+   opacity: 1
+}
+
+.bullet {
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   background: transparent;
+   border: 1.6px solid rgba(255, 255, 255, 0.08);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   position: relative;
+   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+/* small inner dot for subtle visual */
+.bullet::before {
+   content: "";
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.03);
+   transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.bullet:hover {
+   transform: scale(1.12)
+}
+
+.bullet:hover::before {
+   background: rgba(255, 255, 255, 0.07)
+}
+
+.bullet.active {
+   background: var(--accent);
+   border-color: var(--accent);
+   box-shadow: 0 0 18px rgba(224, 224, 224, 0.12), 0 0 36px rgba(224, 224, 224, 0.04);
+   transform: scale(1.06);
+}
+
+.bullet.active::before {
+   transform: scale(0);
+}
+
+/* Tooltip with glow on hover */
+.bullet::after {
+   content: attr(data-label);
+   position: absolute;
+   right: calc(100% + 18px);
+   top: 50%;
+   transform: translateY(-50%) translateX(6px);
+   background: rgba(255, 255, 255, 0.04);
+   color: var(--light);
+   padding: 6px 10px;
+   border-radius: 8px;
+   font-size: 0.82rem;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+   white-space: nowrap;
+   box-shadow: 0 6px 24px rgba(224, 224, 224, 0.04);
+   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+}
+
+.bullet:hover::after {
+   opacity: 1;
+   transform: translateY(-50%) translateX(0);
+   box-shadow: 0 8px 32px rgba(224, 224, 224, 0.08);
+   /* subtle glow */
+   filter: drop-shadow(0 0 8px rgba(224, 224, 224, 0.06));
+}
+
+/* Progress bar + bullets hide on mobile */
+@media (max-width:700px) {
+   #scroll-guide {
+      display: none
+   }
+}
+
+/* Responsive tweaks */
+@media (max-width:600px) {
+   main {
+      padding: 0 1rem
+   }
+
+   section {
+      padding: 1.1rem
+   }
+}
+
+/* small accessibility focus */
+.bullet:focus {
+   outline: 2px dashed rgba(224, 224, 224, 0.12);
+   outline-offset: 6px
+}
