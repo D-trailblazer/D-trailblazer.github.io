@@ -1,5 +1,4 @@
-// Reveal animation on scroll
-// Reveal sections on scroll
+// Reveal sections on scroll animation logic
 const reveals = document.querySelectorAll(".project, .about, .contact");
 
 function revealOnScroll() {
@@ -25,7 +24,7 @@ window.addEventListener("scroll", revealOnScroll);
 // });
 
 
-// Scroll spy effect
+// Scroll spy effect logic
 document.addEventListener("DOMContentLoaded", () => {
 	const sections = document.querySelectorAll("main section");
 	const navLinks = document.querySelectorAll("nav ul li a");
@@ -52,6 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		observer.observe(section);
 	});
 });
+
+
+
 
 // form submission logic
 const form = document.querySelector("form");
