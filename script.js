@@ -15,13 +15,7 @@ window.addEventListener("load", revealOnScroll);
 window.addEventListener("scroll", revealOnScroll);
 
 
-const navToggle = document.getElementById("nav-toggle");
-const navLinks = document.getElementById("nav-links");
 
-navToggle.addEventListener("click", () => {
-	navToggle.classList.toggle("active");
-	navLinks.classList.toggle("open");
-});
 
 
 // Scroll spy effect logic
