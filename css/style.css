@@ -39,7 +39,6 @@ body {
 
 /* Side Navigation */
 nav {
-   max-width: 260px;
    width: 260px;
    background: linear-gradient(180deg, #222, #111);
    color: var(--color-light);
