@@ -92,6 +92,8 @@ nav ul {
       display: block;
       position: relative;
       cursor: pointer;
+      border: none;
+      background: none;
    }
 
 
@@ -103,6 +105,9 @@ nav ul {
       background: linear-gradient(180deg, #222, #111);
       display: none;
       border-bottom: 1px solid var(--color-accent);
+   }
+   .menu.open{
+      display: block;
    }
 
    li {
