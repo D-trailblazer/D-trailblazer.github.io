@@ -4,213 +4,83 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <style>
-      :section.about {
-   background: linear-gradient(135deg, var(--color-dark), var(--color-gray));
-   padding: 3.5rem 2rem;
-   border-radius: var(--radius);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 2rem;
-   opacity: 0;
-   transform: translateY(40px);
-   transition: opacity 0.8s ease, transform 0.8s ease;
-
-   h4 {
-      font-size: clamp(1.5rem, 2vw, 2rem);
-      text-align: center;
-      color: var(--color-light);
-   }
-
-   .bio {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-
-      .colum, .column {
-         flex: 1 1 45%;
-         max-width: 45%;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-      }
-
-      .colum {
-         img {
-            width: 100%;
-            max-width: 420px;
-            border-radius: var(--radius);
-            border: 3px solid var(--color-light);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-            object-fit: cover;
-         }
-      }
-
-      .column {
-         p {
-            font-size: clamp(1rem, 1.2vw, 1.15rem);
-            line-height: 1.7;
-            text-align: left;
-            color: var(--color-light);
-            margin-bottom: 1rem;
-
-            &:first-of-type {
-               font-weight: 600;
-               margin-bottom: 1.2rem;
-            }
-         }
-
-         .socials {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.2rem;
-            margin-top: 1.5rem;
-
-            a {
-               color: var(--color-light);
-               transition: transform 0.3s ease, color 0.3s ease;
-
-               &:hover {
-                  color: var(--color-accent);
-                  transform: translateY(-3px);
-               }
-            }
-         }
-      }
-
-      /* 📱 Responsive layout */
-      @media (max-width: 768px) {
-         flex-direction: column;
-
-         .colum, .column {
-            max-width: 100%;
-            text-align: center;
-         }
-
-         .column p {
-            text-align: center;
-         }
-      }
-   }
-}
-
-   </style>
+   <title>Plasma - Chudubem Eneh</title>
+   <link rel="stylesheet" href="./css/page3.css">
 </head>
 
 <body>
-   <section class="case-study">
-      <div class="divider top"></div>
+   <header>
+      <h1>Plasma Spins</h1>
+      <p>A take on the open source plasma desktop environment</p>
+   </header>
 
-      <div class="content">
-         <header class="fade-up">
-            <h2>🍽️ Rencia Foods Restaurant App</h2>
-            <p class="subtitle">
-               A concept UX case study focused on enhancing restaurant efficiency and
-               customer satisfaction.
-            </p>
-         </header>
+   <main>
+      <section class="default" style="border: 1px solid; margin-bottom: 20px;">
+         <h2>Default Plasma Look</h2>
 
-         <section class="fade-up delay1">
-            <h3>Overview</h3>
-            <p>
-               Rencia Foods is a restaurant that experiences crowding and delays during
-               peak hours. This concept app aims to help the business manage seating
-               capacity efficiently while ensuring customers are served promptly with
-               their preferred dishes available.
-            </p>
-         </section>
+         <img src="./resources/Images/kde/Desktop/edfault_kde.png" alt="">
 
-         <section class="fade-up delay2">
-            <h3>Problem</h3>
-            <p>
-               Customers often arrive to find no free tables or face long waiting times
-               before being served. The restaurant struggles to optimize its seating
-               capacity and kitchen readiness simultaneously, leading to frustration
-               and missed opportunities for both staff and customers.
-            </p>
-         </section>
-
-         <section class="fade-up delay3">
-            <h3>Goals</h3>
-            <ul>
+         <div class="description">
+            <ol>
                <li>
-                  <strong>Business goal:</strong> Manage space efficiently and reduce
-                  customer disappointment.
+                  <b>Visual Design & Aesthetics</b>
+                  <ul>
+                     <li>Bright, clashing colors (wallpaper + mixed icons). A bit generic.</li>
+                     <li>Flat bottom panel with small app launchers + tray icons crammed together.</li>
+                  </ul>
                </li>
+            </ol>
+
+            <ol>
                <li>
-                  <strong>Customer goals:</strong> Get served quickly on arrival and
-                  always find preferred dishes available.
+                  <b>Visual Design & Aesthetics</b>
+                  <ul>
+                     <li>Bright, clashing colors (wallpaper + mixed icons). A bit generic.</li>
+                     <li>Flat bottom panel with small app launchers + tray icons crammed together.</li>
+                  </ul>
                </li>
-            </ul>
-         </section>
+            </ol>
 
-         <section class="fade-up delay4">
-            <h3>Research</h3>
-            <p>
-               Initial user insights were drawn from casual conversations with diners
-               and restaurant staff. Common issues included long wait times,
-               unavailable dishes, and uncertainty about seating. These insights guided
-               the app’s design priorities.
-            </p>
-         </section>
-
-         <section class="fade-up delay5">
-            <h3>Key Insights</h3>
-            <ul>
-               <li>Users want real-time table availability before arrival.</li>
-               <li>Updated menu availability builds customer trust.</li>
-               <li>Simple reservation flows reduce frustration.</li>
-            </ul>
-         </section>
-
-         <section class="fade-up delay6">
-            <h3>Proposed Solution</h3>
-            <p>
-               A mobile application that provides real-time table tracking, allows
-               quick reservations, and displays live menu availability. The solution
-               ensures that both staff and customers experience smoother, faster
-               interactions within the restaurant environment.
-            </p>
-         </section>
-
-         <section class="fade-up delay7">
-            <h3>User Flow</h3>
-            <p>
-               <strong>Flow:</strong> Home → Check Table Availability → Reserve Table →
-               View Menu → Place Order → Confirmation
-            </p>
-         </section>
-
-         <section class="fade-up delay8">
-            <h3>Expected Outcome</h3>
-            <ul>
-               <li>Reduced waiting time upon arrival.</li>
-               <li>Improved customer satisfaction through reliability.</li>
-               <li>Optimized table turnover and kitchen efficiency.</li>
-            </ul>
-         </section>
-
-         <section class="fade-up delay9">
-            <h3>My Role</h3>
-            <p>Concept design, UX planning, and documentation.</p>
-
-            <h3>Tools</h3>
-            <p>Figma (for prototyping), Notion (for research and notes).</p>
-         </section>
-
-         <div class="coming-soon fade-up delay10">
-            ✨ Visual mockups and interactive prototype coming soon.
+            <ol>
+               <li>
+                  <b>Visual Design & Aesthetics</b>
+                  <ul>
+                     <li>Bright, clashing colors (wallpaper + mixed icons). A bit generic.</li>
+                     <li>Flat bottom panel with small app launchers + tray icons crammed together.</li>
+                  </ul>
+               </li>
+            </ol>
          </div>
-      </div>
+      </section>
 
-      <div class="divider bottom"></div>
-   </section>
+      <section class="spins">
+         <div class="spin">
+            <h2>Cyperbunk</h2>
+            <img src="./resources/Images/kde/Desktop/cyberpunk.png" alt="" class="img">
+            <div class="description">
+               <p>Features</p>
+               <ul class="features">
+                  <b>Visual Design & Aesthetics</b>
+                  <li>Similar to Microsoft windows style, easy for windows users to pick uo</li>
+                  <li>Beautiful, high-contrast, spiky design</li>
+                  <li>Might be too colorful for some users</li>
+                  <li>Dock centered at the bottom → macOS-inspired, faster recognition, stronger focus on core apps.
+                  </li>
+                  <li>**Minimal tray icons** moved to the **top bar** → clearer separation of system vs. app controls.
+                  </li>
+                  <li>Improvement**: Better **hierarchy** — bottom dock = productivity, top bar = status info.</li>
+               </ul>
+               <p></p>
+            </div>
+
+         </div>
+
+         <div class="spin">
+            <div class="description"></div>
+            <img src="" alt="" class="img">
+         </div>
+      </section>
+   </main>
 </body>
 
 </html>
