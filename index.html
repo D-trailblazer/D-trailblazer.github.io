@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Chidubem Eneh</title>
-   <link rel="stylesheet" href="./css/style.css" />
    <link rel="stylesheet" href="./resources/fontawesome-free-6.6.0-web/css/all.css" />
    <link rel="stylesheet" href="./resources/fontawesome-free-6.6.0-web/css/brands.css" />
+   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
    <div class="container">
       <nav>
@@ -16,20 +18,25 @@
             <span id="name">Chidubem Eneh</span>
          </header>
 
-         <!-- Toggle button for mobile -->
-         <span class="fa fa-bandage nav-toggle"></span>
-
-
          <ul id="nav-links">
-            <li><a href="#work" title="See my UX projects">UX Designer</a></li>
-            <li><a href="#about" title="Learn about my approach">Innovator</a></li>
-            <li><a href="#contact" title="Get in touch">Problem Solver</a></li>
+            <!-- Toggle button for mobile -->
+               <span id="toggle">About</span>
+
+            <div class="menu">
+               <li><a href="#work" title="See my UX projects">UX Designer</a></li>
+               <li><a href="#about" title="Learn about my approach">Innovator</a></li>
+               <li><a href="#contact" title="Get in touch">Problem Solver</a></li>
+            </div>
          </ul>
       </nav>
 
+      
       <main>
-         <section class="work" id="work">
+         <header>
             <h1>Chidubem Eneh is a talented entry <br> level UX designer</h1>
+         </header>
+
+         <section class="work" id="work">
             <div class="project" id="restaurant">
                <div class="column image">
                   <img src="./resources/Images/hamburger.jpg" alt="">
@@ -45,13 +52,13 @@
 
 
             <div class="project" id="plasma">
+               <div class="column image">
+                  <img src="./resources/Images/kde/Desktop/Professional1.png" alt="">
+               </div>
                <div class="column description">
                   <h2 class="header">KDE Plasma Desktop (personal)</h2>
                   <p>My take on the Plasma desktop environment offering different spins for individual tastes</p>
-                  <!-- <a href="page3.html" class="view-more-btn" disabled>View more</a> -->
-               </div>
-               <div class="column image">
-                  <img src="./resources/Images/kde/Desktop/Professional1.png" alt="">
+                  <a href="page3.html" class="view-more-btn" disabled>View more</a> 
                </div>
             </div>
          </section>
@@ -126,5 +133,7 @@
       </footer>
    </div>
    <script src="script.js"></script>
+   <script src="script2.js"></script>
 </body>
+
 </html>
